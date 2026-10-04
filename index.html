@@ -167,7 +167,6 @@
 
       .splash-inner {
         position: relative;
-        z-index: 2;
         text-align: center;
         padding: 0 36px;
         max-width: 420px;
@@ -237,7 +236,6 @@
 
       .char-scene {
         transform-style: preserve-3d;
-        animation: charHover 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       }
       @keyframes charHover {
         0% {
@@ -258,9 +256,9 @@
       }
 
       .char-shadow {
-        width: 90px;
+        width: 300px;
         height: 12px;
-        margin: 2px auto 0;
+        margin: -20px auto 0;
         border-radius: 50%;
         animation: shadowPulse 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
       }
@@ -2298,7 +2296,7 @@
         </p>
 
         <!-- ── Animated 3D Character ── -->
-        <div class="splash-char">
+        <div class="splash-char" style="mix-blend-mode: multiply">
           <div
             class="char-scene"
             style="position: relative; display: inline-block"
@@ -2312,344 +2310,20 @@
               <div class="sparkle"></div>
             </div>
 
-            <svg
-              width="150"
-              height="190"
-              viewBox="0 0 180 220"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <!-- Feet with bounce -->
-              <g class="char-feet">
-                <ellipse
-                  cx="72"
-                  cy="208"
-                  rx="14"
-                  ry="7"
-                  fill="#3D2B1A"
-                  rx="14"
-                />
-                <ellipse cx="108" cy="208" rx="14" ry="7" fill="#3D2B1A" />
-                <!-- Shoe highlights -->
-                <ellipse
-                  cx="72"
-                  cy="206"
-                  rx="8"
-                  ry="3"
-                  fill="#5A4030"
-                  opacity=".3"
-                />
-                <ellipse
-                  cx="108"
-                  cy="206"
-                  rx="8"
-                  ry="3"
-                  fill="#5A4030"
-                  opacity=".3"
-                />
-              </g>
-
-              <!-- Legs -->
-              <rect
-                x="64"
-                y="175"
-                width="18"
-                height="28"
-                rx="7"
-                fill="#4A7FB5"
-              />
-              <rect
-                x="98"
-                y="175"
-                width="18"
-                height="28"
-                rx="7"
-                fill="#4A7FB5"
-              />
-              <!-- Leg highlights -->
-              <rect
-                x="66"
-                y="177"
-                width="6"
-                height="22"
-                rx="3"
-                fill="#5B8FC9"
-                opacity=".3"
-              />
-              <rect
-                x="100"
-                y="177"
-                width="6"
-                height="22"
-                rx="3"
-                fill="#5B8FC9"
-                opacity=".3"
-              />
-
-              <!-- Body group with breathing -->
-              <g class="char-body-group">
-                <!-- Body / torso -->
-                <ellipse cx="90" cy="165" rx="38" ry="42" fill="#E0956A" />
-                <!-- Shirt -->
-                <ellipse cx="90" cy="158" rx="35" ry="38" fill="#C5793A" />
-                <rect
-                  x="62"
-                  y="148"
-                  width="56"
-                  height="36"
-                  rx="10"
-                  fill="#C5793A"
-                />
-                <!-- Shirt fold details -->
-                <path
-                  d="M70 165 Q90 170 110 165"
-                  stroke="#B06A30"
-                  stroke-width="1"
-                  fill="none"
-                  opacity=".3"
-                />
-                <path
-                  d="M72 172 Q90 176 108 172"
-                  stroke="#B06A30"
-                  stroke-width="1"
-                  fill="none"
-                  opacity=".2"
-                />
-                <!-- Star on shirt -->
-                <g class="char-star" style="transform-origin: 90px 162px">
-                  <text
-                    x="83"
-                    y="168"
-                    font-size="18"
-                    fill="rgba(255,255,255,.9)"
-                    font-weight="bold"
-                  >
-                    ★
-                  </text>
-                </g>
-                <!-- Collar -->
-                <path
-                  d="M75 138 Q90 145 105 138"
-                  stroke="#D4854A"
-                  stroke-width="2.5"
-                  fill="none"
-                  stroke-linecap="round"
-                />
-
-                <!-- Left arm (static with gentle sway) -->
-                <g class="char-static-arm" style="transform-origin: 56px 145px">
-                  <path
-                    d="M56 145 Q42 158 38 172"
-                    stroke="#F5CBA7"
-                    stroke-width="12"
-                    fill="none"
-                    stroke-linecap="round"
-                  />
-                  <!-- Hand -->
-                  <circle cx="37" cy="174" r="8" fill="#F5CBA7" />
-                  <!-- Fingers curl -->
-                  <circle cx="33" cy="178" r="3" fill="#F5CBA7" />
-                  <circle cx="37" cy="180" r="3" fill="#F5CBA7" />
-                </g>
-
-                <!-- Right arm (waving) -->
-                <g class="char-wave-arm" style="transform-origin: 124px 145px">
-                  <path
-                    d="M124 145 Q138 128 142 110"
-                    stroke="#F5CBA7"
-                    stroke-width="12"
-                    fill="none"
-                    stroke-linecap="round"
-                  />
-                  <!-- Hand open -->
-                  <circle cx="143" cy="106" r="9" fill="#F5CBA7" />
-                  <!-- Spread fingers -->
-                  <ellipse
-                    cx="148"
-                    cy="98"
-                    rx="3"
-                    ry="4"
-                    fill="#F5CBA7"
-                    transform="rotate(-15 148 98)"
-                  />
-                  <ellipse
-                    cx="152"
-                    cy="102"
-                    rx="3"
-                    ry="3.5"
-                    fill="#F5CBA7"
-                    transform="rotate(-5 152 102)"
-                  />
-                  <ellipse
-                    cx="153"
-                    cy="108"
-                    rx="3"
-                    ry="3.5"
-                    fill="#F5CBA7"
-                    transform="rotate(10 153 108)"
-                  />
-                  <ellipse
-                    cx="150"
-                    cy="113"
-                    rx="2.5"
-                    ry="3"
-                    fill="#F5CBA7"
-                    transform="rotate(25 150 113)"
-                  />
-                </g>
-              </g>
-
-              <!-- Head group with bobbing -->
-              <g class="char-head-group" style="transform-origin: 90px 95px">
-                <!-- Neck -->
-                <rect
-                  x="82"
-                  y="120"
-                  width="16"
-                  height="14"
-                  rx="6"
-                  fill="#F5CBA7"
-                />
-
-                <!-- Head shape -->
-                <ellipse cx="90" cy="92" rx="38" ry="40" fill="#F5CBA7" />
-                <!-- Face shadow -->
-                <ellipse
-                  cx="90"
-                  cy="98"
-                  rx="30"
-                  ry="28"
-                  fill="#EDBC9A"
-                  opacity=".2"
-                />
-
-                <!-- Hair with bounce -->
-                <g class="char-hair" style="transform-origin: 90px 65px">
-                  <path
-                    d="M54 82 Q58 48 90 44 Q122 48 126 82 Q130 68 122 56 Q110 40 90 38 Q70 40 58 56 Q50 68 54 82Z"
-                    fill="#3D2B1A"
-                  />
-                  <!-- Hair tuft / bangs -->
-                  <ellipse cx="66" cy="68" rx="10" ry="7" fill="#3D2B1A" />
-                  <ellipse
-                    cx="80"
-                    cy="62"
-                    rx="8"
-                    ry="5"
-                    fill="#3D2B1A"
-                    transform="rotate(-10 80 62)"
-                  />
-                  <!-- Hair highlight -->
-                  <path
-                    d="M70 52 Q80 48 90 50"
-                    stroke="#5A4030"
-                    stroke-width="2"
-                    fill="none"
-                    opacity=".3"
-                    stroke-linecap="round"
-                  />
-                  <!-- Side hair -->
-                  <ellipse cx="56" cy="85" rx="6" ry="10" fill="#3D2B1A" />
-                  <ellipse cx="124" cy="85" rx="6" ry="10" fill="#3D2B1A" />
-                </g>
-
-                <!-- Eyebrows (expressive) -->
-                <path
-                  d="M68 77 Q74 74 80 77"
-                  stroke="#3D2B1A"
-                  stroke-width="2"
-                  fill="none"
-                  stroke-linecap="round"
-                />
-                <path
-                  d="M100 77 Q106 74 112 77"
-                  stroke="#3D2B1A"
-                  stroke-width="2"
-                  fill="none"
-                  stroke-linecap="round"
-                />
-
-                <!-- Eyes with blink -->
-                <g class="char-eye-l" style="transform-origin: 74px 86px">
-                  <ellipse cx="74" cy="86" rx="5" ry="5.5" fill="#2C2018" />
-                  <circle cx="76" cy="84" r="2" fill="#fff" />
-                  <circle cx="72" cy="88" r="1" fill="#fff" opacity=".5" />
-                </g>
-                <g class="char-eye-r" style="transform-origin: 106px 86px">
-                  <ellipse cx="106" cy="86" rx="5" ry="5.5" fill="#2C2018" />
-                  <circle cx="108" cy="84" r="2" fill="#fff" />
-                  <circle cx="104" cy="88" r="1" fill="#fff" opacity=".5" />
-                </g>
-
-                <!-- Nose -->
-                <ellipse
-                  cx="90"
-                  cy="95"
-                  rx="2.5"
-                  ry="2"
-                  fill="#E8B090"
-                  opacity=".5"
-                />
-
-                <!-- Smile -->
-                <path
-                  d="M78 102 Q84 112 90 110 Q96 112 102 102"
-                  stroke="#2C2018"
-                  stroke-width="2.5"
-                  fill="none"
-                  stroke-linecap="round"
-                />
-                <!-- Smile dimples -->
-                <circle cx="76" cy="103" r="1.5" fill="#2C2018" opacity=".15" />
-                <circle
-                  cx="104"
-                  cy="103"
-                  r="1.5"
-                  fill="#2C2018"
-                  opacity=".15"
-                />
-
-                <!-- Cheeks with glow -->
-                <circle
-                  class="char-cheek"
-                  cx="64"
-                  cy="98"
-                  r="7"
-                  fill="#F0A0A0"
-                  opacity=".25"
-                />
-                <circle
-                  class="char-cheek"
-                  cx="116"
-                  cy="98"
-                  r="7"
-                  fill="#F0A0A0"
-                  opacity=".25"
-                  style="animation-delay: 0.5s"
-                />
-
-                <!-- Ear left -->
-                <ellipse cx="52" cy="90" rx="5" ry="7" fill="#F5CBA7" />
-                <ellipse
-                  cx="52"
-                  cy="90"
-                  rx="3"
-                  ry="4.5"
-                  fill="#EDBC9A"
-                  opacity=".4"
-                />
-                <!-- Ear right -->
-                <ellipse cx="128" cy="90" rx="5" ry="7" fill="#F5CBA7" />
-                <ellipse
-                  cx="128"
-                  cy="90"
-                  rx="3"
-                  ry="4.5"
-                  fill="#EDBC9A"
-                  opacity=".4"
-                />
-              </g>
-            </svg>
+            <!-- Video MP4 bersih dari efek mix-blend-mode -->
+            <video
+              src="assets/wave.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              style="
+                width: 300px;
+                height: 190px;
+                object-fit: cover;
+                pointer-events: none;
+              "
+            ></video>
           </div>
           <div class="char-shadow"><div class="char-shadow-inner"></div></div>
         </div>
